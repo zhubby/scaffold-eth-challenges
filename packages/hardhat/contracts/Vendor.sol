@@ -24,7 +24,7 @@ contract Vendor is Ownable {
         uint256 vendorTokens = yourToken.balanceOf(msg.sender);
         // 检查合约所剩的余额大于执行人需要购买的数量
         require(
-            vendorBalance >= amountToBuy,
+            vendorTokens >= amountToBuy,
             "Vendor contract has not enough tokens in its balance"
         );
         // 丛合约内转账到执行人
